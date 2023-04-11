@@ -1,0 +1,55 @@
+.mission-row, .header-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease;
+}
+
+.header-row, .mission-name {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.header-row {
+  margin: .7rem 0 .7rem 0.5rem;
+}
+
+.mission-description, .mission-status {
+  margin-left: 0.5rem;
+}
+
+.mission-row:hover {
+  background-color: #e8e8e8;
+}
+
+.mission-row:nth-child(even) {
+  background-color: rgba(193, 222, 231, 0.568);
+}
+
+.mission-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.mission-status {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-radius: 0.5rem;
+}
+
+.member-button {
+  font-weight: bold;
+  background-color: grey;
+  border: none;
+  color: white;
+}
+
+.mission-button {
+  border: solid 1px black;
+  padding: 0.5rem;
+}
