@@ -6,6 +6,7 @@ import View from './components/View';
 import { fetchMissions } from './redux/missions/missionsSlice';
 import { fetchRockets } from './redux/rockets/rocketsSlice';
 import Rockets from './components/Rockets';
+import Missions from './components/Missions';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function App() {
       <View />
       <Routes>
         <Route path="/" element={<Rockets />} />
+        <Route path="missions" element={<Missions />} />
       </Routes>
     </>
   );
