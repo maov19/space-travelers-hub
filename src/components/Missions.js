@@ -7,10 +7,6 @@ const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
 
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
   return (
     <div className="missions-grid">
       <div className="missions-header">Mission Name</div>
