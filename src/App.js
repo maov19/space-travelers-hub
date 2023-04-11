@@ -4,7 +4,7 @@ import View from './components/View';
 function App() {
   return (
     <>
-    <View />
+      <View />
     </>
   );
 }

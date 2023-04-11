@@ -1,0 +1,2 @@
+TBD - Create a route and a view component. Use <NavLink /> for the page navigation links and style active class to indicate which section/page the user is currently on (underline active navigation link).
+Create a directory for all Redux state slice files.
