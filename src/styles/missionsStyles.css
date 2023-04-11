@@ -1,0 +1,19 @@
+.missions-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.missions-header {
+  font-weight: bold;
+}
+
+.missions-name {
+  font-weight: bold;
+}
+
+.missions-buttons {
+  display: flex;
+  justify-content: space-between;
+}
