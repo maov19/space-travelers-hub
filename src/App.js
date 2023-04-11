@@ -1,9 +1,10 @@
 import './App.css';
+import View from './components/View';
 
 function App() {
   return (
     <>
-    <NavLink />
+    <View />
     </>
   );
 }
