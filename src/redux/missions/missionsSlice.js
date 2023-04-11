@@ -3,6 +3,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const initialState = {
+  missions: [],
+}
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
@@ -17,13 +20,16 @@ export const fetchMissions = createAsyncThunk(
 
 export const missionsSlice = createSlice({
   name: 'missions',
-  initialState: [],
+  initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, action) => {
         // Store the first 10 missions in the state
-        state.push(...action.payload);
+        // state.push(action.payload);
+        return {
+          ...state, missions: action.payload
+        }
       });
   }
 });
