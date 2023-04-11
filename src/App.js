@@ -5,6 +5,7 @@ import './App.css';
 import View from './components/View';
 import { fetchMissions } from './redux/missions/missionsSlice';
 import { fetchRockets } from './redux/rockets/rocketsSlice';
+import Missions from './components/Missions';
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <View />
+      <Missions />
     </>
   );
 }
