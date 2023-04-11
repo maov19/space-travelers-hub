@@ -1,21 +1,21 @@
-/* eslint-disable */
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
   missions: [],
-}
+};
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
     const response = await axios.get('https://api.spacexdata.com/v3/missions?limit=10');
-    return response.data.map(({ mission_id, mission_name, description }) => ({
-      mission_id,
-      mission_name,
+    return response.data.map((
+      { mission_id: missionId, mission_name: missionName, description },
+    ) => ({
+      mission_id: missionId,
+      mission_name: missionName,
       description,
     }));
-  }
+  },
 );
 
 export const missionsSlice = createSlice({
@@ -24,16 +24,10 @@ export const missionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchMissions.fulfilled, (state, action) => {
-        // Store the first 10 missions in the state
-        // state.push(action.payload);
-        return {
-          ...state, missions: action.payload
-        }
-      });
-  }
+      .addCase(fetchMissions.fulfilled, (state, action) => (
+        { ...state, missions: action.payload }
+      ));
+  },
 });
 
 export default missionsSlice.reducer;
-
-
