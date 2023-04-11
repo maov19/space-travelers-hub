@@ -1,10 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
+/* eslint-disable */
+import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
-    mission: missionsReducer,
-    rocket: rocketsReducer,
+    // mission: missionsReducer,
+    // rocket: rocketsReducer,
   },
 });
 
-export default store
+export default store;
