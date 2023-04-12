@@ -30,6 +30,17 @@ export const joinMission = createAsyncThunk(
   },
 );
 
+export const cancelMission = createAsyncThunk(
+  'missions/cancelMission',
+  async (missionId, { getState }) => {
+    const { missions } = getState().missions;
+    const updatedMissions = missions.map((mission) => (mission.mission_id === missionId ? {
+      ...mission, reserved: false,
+    } : mission));
+    return updatedMissions;
+  },
+);
+
 export const missionsSlice = createSlice({
   name: 'missions',
   initialState,
@@ -40,6 +51,9 @@ export const missionsSlice = createSlice({
         { ...state, missions: action.payload }
       ))
       .addCase(joinMission.fulfilled, (state, action) => (
+        { ...state, missions: action.payload }
+      ))
+      .addCase(cancelMission.fulfilled, (state, action) => (
         { ...state, missions: action.payload }
       ));
   },

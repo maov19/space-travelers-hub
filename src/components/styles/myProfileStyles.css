@@ -1,0 +1,16 @@
+.missions-title {
+  margin-left: 1rem;
+}
+
+.my-profile-table {
+  margin: 1rem 1rem 0 1rem;
+  width: 40%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.my-profile-table th,
+.my-profile-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}

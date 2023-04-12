@@ -35,24 +35,15 @@
 }
 
 .mission-status {
-  padding: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 button {
-  border-radius: 0.5rem;
-}
-
-.member-button {
-  font-weight: bold;
-  background-color: grey;
-  border: none;
-  color: white;
+  border-radius: 0.2rem;
 }
 
 .mission-button {
   border: solid 1px black;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
