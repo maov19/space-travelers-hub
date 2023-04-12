@@ -24,7 +24,7 @@ export const joinMission = createAsyncThunk(
   async (missionId, { getState }) => {
     const { missions } = getState().missions;
     const updatedMissions = missions.map((mission) => (mission.mission_id === missionId ? {
-      ...mission, reserved: true,
+      ...mission, reserved: !mission.reserved,
     } : mission));
     return updatedMissions;
   },
