@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { reserveRocket, cancelReserve } from '../redux/rockets/rocketsSlice';
 import { btnBookStyle, reservedStyle, btnCancelStyle } from './RocketBtnStyles';
 
+
 const RocketList = ({ item }) => {
   const dispatch = useDispatch();
   const {
     id, rocket_name: rocketName, description, flickr_images: rocketImage,
   } = item;
-  const [firstImage] = rocketImage;
 
   const reserveClick = (id) => {
     dispatch(reserveRocket(id));
@@ -21,7 +21,7 @@ const RocketList = ({ item }) => {
 
   return (
     <li className="rocket-container">
-      <div><img src={firstImage} alt={rocketName} style={{ width: 200, height: 150 }} /></div>
+      <div><img src={rocketImage} alt={rocketName} style={{ width: 200, height: 150 }} /></div>
       <div>
         <h4>{rocketName}</h4>
         <p>

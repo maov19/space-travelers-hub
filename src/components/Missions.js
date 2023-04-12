@@ -22,8 +22,8 @@ const Missions = () => {
           <div className="missions-header-status">Status</div>
         </div>
         {missions.map((mission) => (
-          <div key={mission.mission_id} className="mission-row">
-            <div className="mission-name">{mission.mission_name}</div>
+          <div key={mission.missionId} className="mission-row">
+            <div className="mission-name">{mission.missionName}</div>
             <div className="mission-description">{mission.description}</div>
             <div className="mission-status">
               {mission.reserved ? (
@@ -38,11 +38,11 @@ const Missions = () => {
             </div>
             <div className="mission-status">
               {mission.reserved ? (
-                <button className="mission-button" type="button" style={missionButtonStyles.leaveMission} onClick={() => handleCancelMission(mission.mission_id)}>
+                <button className="mission-button" type="button" style={missionButtonStyles.leaveMission} onClick={() => handleCancelMission(mission.missionId)}>
                   Leave Mission
                 </button>
               ) : (
-                <button className="mission-button" type="button" style={missionButtonStyles.joinMission} onClick={() => handleJoinMission(mission.mission_id)}>
+                <button className="mission-button" type="button" style={missionButtonStyles.joinMission} onClick={() => handleJoinMission(mission.missionId)}>
                   Join Mission
                 </button>
               )}
