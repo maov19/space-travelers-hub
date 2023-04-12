@@ -18,8 +18,8 @@ const MyProfile = () => {
           <tbody>
             <>
               {joinedMissions.map((mission) => (
-                <tr key={mission.mission_id}>
-                  <td>{mission.mission_name}</td>
+                <tr key={mission.missionId}>
+                  <td>{mission.missionName}</td>
                 </tr>
               ))}
             </>
