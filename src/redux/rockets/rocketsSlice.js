@@ -43,9 +43,18 @@ const rocketsSlice = createSlice({
   },
   extraReducers: {
     [fetchRockets.pending]: (state) => ({ ...state, isLoading: true }),
-    [fetchRockets.fulfilled]: (state, { payload }) => (
-      { ...state, isLoading: false, rockets: payload }
-    ),
+    [fetchRockets.fulfilled]: (state, { payload }) => {
+      const newRockets = [];
+      payload.map((rocket) => (
+        newRockets.push({
+          id: rocket.id,
+          rocket_name: rocket.rocket_name,
+          description: rocket.description,
+          flickr_images: rocket.flickr_images[0],
+        })
+      ));
+      return { ...state, isLoading: false, rockets: newRockets };
+    },
     [fetchRockets.rejected]: (state, action) => (
       { ...state, isLoading: false, error: action.payload }
     ),
