@@ -1,8 +1,13 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { joinMission } from '../redux/missions/missionsSlice';
 import './styles/missionsStyles.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
+  const dispatch = useDispatch();
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
 
   return (
     <div>
@@ -20,7 +25,7 @@ const Missions = () => {
               <button className="member-button" type="button">NOT A MEMBER</button>
             </div>
             <div className="mission-status">
-              <button className="mission-button" type="button">Join Mission</button>
+              <button className="mission-button" type="button" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
             </div>
           </div>
         ))}
