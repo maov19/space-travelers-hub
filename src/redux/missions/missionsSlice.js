@@ -19,13 +19,12 @@ export const fetchMissions = createAsyncThunk(
   },
 );
 
-// added a the mission reserve state
 export const joinMission = createAsyncThunk(
   'missions/joinMission',
   async (missionId, { getState }) => {
     const { missions } = getState().missions;
     const updatedMissions = missions.map((mission) => (mission.mission_id === missionId ? {
-      ...mission, reserved: true,
+      ...mission, reserved: !mission.reserved,
     } : mission));
     return updatedMissions;
   },
@@ -40,7 +39,6 @@ export const missionsSlice = createSlice({
       .addCase(fetchMissions.fulfilled, (state, action) => (
         { ...state, missions: action.payload }
       ))
-      // added the mission reserve state reducer
       .addCase(joinMission.fulfilled, (state, action) => (
         { ...state, missions: action.payload }
       ));
