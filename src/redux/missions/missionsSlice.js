@@ -4,6 +4,7 @@ import axios from 'axios';
 const initialState = {
   missions: [],
 };
+
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
@@ -18,6 +19,18 @@ export const fetchMissions = createAsyncThunk(
   },
 );
 
+// added a the mission reserve state
+export const joinMission = createAsyncThunk(
+  'missions/joinMission',
+  async (missionId, { getState }) => {
+    const { missions } = getState().missions;
+    const updatedMissions = missions.map((mission) => (mission.mission_id === missionId ? {
+      ...mission, reserved: true,
+    } : mission));
+    return updatedMissions;
+  },
+);
+
 export const missionsSlice = createSlice({
   name: 'missions',
   initialState,
@@ -25,6 +38,10 @@ export const missionsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, action) => (
+        { ...state, missions: action.payload }
+      ))
+      // added the mission reserve state reducer
+      .addCase(joinMission.fulfilled, (state, action) => (
         { ...state, missions: action.payload }
       ));
   },
