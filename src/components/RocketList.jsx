@@ -15,7 +15,7 @@ const RocketList = ({ item }) => {
     dispatch(reserveRocket(id));
   };
 
-  const cancelClick = (id) => {
+  const cancelReserveClick = (id) => {
     dispatch(cancelReserve(id));
   };
 
@@ -35,7 +35,7 @@ const RocketList = ({ item }) => {
         {
         item.reserved
           ? (
-            <button type="button" style={btnCancelStyle} onClick={() => cancelClick(id)}>
+            <button type="button" style={btnCancelStyle} onClick={() => cancelReserveClick(id)}>
               Cancel Reservation
             </button>
           )
