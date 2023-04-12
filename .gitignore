@@ -24,3 +24,6 @@ yarn-error.log*
 
 requirements
 gifs
+
+src/components/tests/__snapshots__/missions.test.js.snap   
+src/components/tests/missions.test.js

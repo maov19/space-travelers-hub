@@ -2,8 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { reserveRocket, cancelReserve } from '../redux/rockets/rocketsSlice';
-import { btnBookStyle, reservedStyle, btnCancelStyle } from './RocketBtnStyles';
-
+import { btnBookStyle, reservedStyle, btnCancelStyle } from './styles/RocketBtnStyles';
 
 const RocketList = ({ item }) => {
   const dispatch = useDispatch();
