@@ -1,0 +1,16 @@
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 7rem;
+}
+
+.rocket-container h4 {
+  margin: 0;
+}
+
+.rocket-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
