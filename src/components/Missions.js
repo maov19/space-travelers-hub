@@ -27,7 +27,7 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id} className="mission-row">
-              <td className="mission-name">{mission.mission_name}</td>
+              <td className="mission-name">{mission.missionName}</td>
               <td className="mission-description">{mission.description}</td>
               <td className="mission-status">
                 {mission.reserved ? (
@@ -46,7 +46,7 @@ const Missions = () => {
                     className="mission-button"
                     type="button"
                     style={missionButtonStyles.leaveMission}
-                    onClick={() => handleCancelMission(mission.mission_id)}
+                    onClick={() => handleCancelMission(mission.missionId)}
                   >
                     Leave Mission
                   </button>
@@ -55,7 +55,7 @@ const Missions = () => {
                     className="mission-button"
                     type="button"
                     style={missionButtonStyles.joinMission}
-                    onClick={() => handleJoinMission(mission.mission_id)}
+                    onClick={() => handleJoinMission(mission.missionId)}
                   >
                     Join Mission
                   </button>

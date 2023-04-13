@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   border-bottom: 1px solid rgba(211, 205, 205, 0.445);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  padding: 1rem;
 }
 
 #nav-bar img {
@@ -23,7 +28,7 @@
 }
 
 #nav-bar a {
-  margin-left: 1rem;
+  margin: 0 2rem 0 1rem;
   text-decoration: none;
 
   /* color: #fff; */
