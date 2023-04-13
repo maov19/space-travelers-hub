@@ -4,7 +4,8 @@ import './styles/missionsStyles.css';
 import missionButtonStyles from './styles/missionButtonStyles';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missions.missions);
+  const data = useSelector((store) => store.mission);
+  const { missions } = data;
   const dispatch = useDispatch();
   const handleJoinMission = (missionId) => {
     dispatch(joinMission(missionId));
@@ -26,7 +27,7 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.map((mission) => (
-            <tr key={mission.mission_id} className="mission-row">
+            <tr key={mission.missionId} className="mission-row">
               <td className="mission-name">{mission.missionName}</td>
               <td className="mission-description">{mission.description}</td>
               <td className="mission-status">

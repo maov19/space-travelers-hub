@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './styles/myProfileStyles.css';
 
 const MyProfile = () => {
-  const missions = useSelector((state) => state.missions.missions);
+  const missions = useSelector((state) => state.mission.missions);
   const rockets = useSelector((store) => store.rocket.rockets);
 
   // filter missions with reserved=true
