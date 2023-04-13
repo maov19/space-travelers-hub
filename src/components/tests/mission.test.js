@@ -19,7 +19,7 @@ describe('Check if Missions component renders', () => {
   beforeEach(() => {
     store = mockStore({
       mission: {
-          missions: [
+        missions: [
           {
             missionId: 1,
             missionName: 'Mission 1',
