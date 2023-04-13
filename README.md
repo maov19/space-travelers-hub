@@ -89,11 +89,11 @@ To get the content of this project locally you need to run the following command
 
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/maov19/javascript-capstone/
+git clone https://github.com/maov19/space-travelers-hub/
 ```
 2. To access cloned directory run:
 ```bash
-cd javascript-capstone
+cd space-travelers-hub
 ```
 
 ### Install
