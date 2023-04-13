@@ -146,10 +146,11 @@ npx eslint .
 
 👤 **Authors**
 
-Koshao Kazungu Godfrey & Martin Ossa
+Koshao Kazungu Godfrey
 - GitHub: [@Koshao-sys](https://github.com/Koshao-sys)
 - Twitter: [@KoshaoKG](https://twitter.com/KoshaoKG)
 
+Martin Ossa
 - GitHub: [@maov19](https://github.com/maov19)
 - Twitter: [@maov08](https://twitter.com/@maov08)
 
