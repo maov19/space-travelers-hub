@@ -1,8 +1,9 @@
 # Space Traveler's Hub
-A group project using react and redux
+
+
 <!-- TABLE OF CONTENTS -->
 
-# 📗 Table of Contents
+# 📗 Table of Contents<a name="table-contents"></a>
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
@@ -14,8 +15,6 @@ A group project using react and redux
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -25,14 +24,14 @@ A group project using react and redux
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Series Special] <a name="about-project"></a>
+# 📖 About <a name="about-project"></a>
 
 A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-## 🛠 Built With 
+## 🛠 Built With <a name="built-with"></a> 
 
 ### Tech Stack <a name="tech-stack"></a>
-- JS React
+- React
 - Redux
 
 ### Database <a name="data-base"></a>
@@ -65,13 +64,14 @@ A web application for a company that provides commercial and scientific space tr
  - Book rockets
  - Join selected space missions
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a> 
-Coming soon!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[Space Traveler's Hub](https://space-travellers-ztro.onrender.com/)
+
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -136,9 +136,10 @@ npx eslint .
 
 ### Deployment
 
-Coming soon!
+[Space Traveler's Hub](https://space-travellers-ztro.onrender.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
+
 <!-- AUTHOR -->
 
 ## 👥 Author: <a name="authors"></a>
@@ -152,15 +153,16 @@ Koshao Kazungu Godfrey & Martin Ossa
 - GitHub: [@maov19](https://github.com/maov19)
 - Twitter: [@maov08](https://twitter.com/@maov08)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Responsiveness for mobile version
+- Leave Rockets and Missions from Profile section
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -170,7 +172,7 @@ Contributions, issues, and feature requests are welcome!
 
 [Kindly raise issue here](https://github.com/maov19/space-travelers-hub/issues)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
@@ -178,18 +180,20 @@ Contributions, issues, and feature requests are welcome!
 
 If you like this project, kindly follow me on GitHub 😊
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-Coming soon!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Thanks to Microverse and all their coding community!
+
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-contents">back to top</a>)</p>
