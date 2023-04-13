@@ -40,9 +40,12 @@ const rocketsSlice = createSlice({
       return { ...state, rockets: updatedRockets };
     },
   },
-  extraReducers: {
-    [fetchRockets.pending]: (state) => ({ ...state, isLoading: true }),
-    [fetchRockets.fulfilled]: (state, { payload }) => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchRockets.pending, (state) => ({
+      ...state,
+      isLoading: true,
+    }));
+    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
       const newRockets = [];
       payload.map((rocket) => (
         newRockets.push({
@@ -53,10 +56,12 @@ const rocketsSlice = createSlice({
         })
       ));
       return { ...state, isLoading: false, rockets: newRockets };
-    },
-    [fetchRockets.rejected]: (state, action) => (
-      { ...state, isLoading: false, error: action.payload }
-    ),
+    });
+    builder.addCase(fetchRockets.rejected, (state, action) => ({
+      ...state,
+      isLoading: false,
+      error: action.payload,
+    }));
   },
 });
 

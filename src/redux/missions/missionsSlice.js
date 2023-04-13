@@ -13,32 +13,23 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   }
 });
 
-export const joinMission = createAsyncThunk(
-  'missions/joinMission',
-  async (missionId, { getState }) => {
-    const { missions } = getState().missions;
-    const updatedMissions = missions.map((mission) => (mission.missionId === missionId ? {
-      ...mission, reserved: !mission.reserved,
-    } : mission));
-    return updatedMissions;
-  },
-);
-
-export const cancelMission = createAsyncThunk(
-  'missions/cancelMission',
-  async (missionId, { getState }) => {
-    const { missions } = getState().missions;
-    const updatedMissions = missions.map((mission) => (mission.missionId === missionId ? {
-      ...mission, reserved: false,
-    } : mission));
-    return updatedMissions;
-  },
-);
-
-export const missionsSlice = createSlice({
-  name: 'missions',
+const missionsSlice = createSlice({
+  name: 'mission',
   initialState,
-  reducers: {},
+  reducers: {
+    joinMission: (state, { payload }) => {
+      const updatedMissions = state.missions.map((mission) => (mission.missionId === payload ? {
+        ...mission, reserved: !mission.reserved,
+      } : mission));
+      return { ...state, missions: updatedMissions };
+    },
+    cancelMission: (state, { payload }) => {
+      const updatedMissions = state.missions.map((mission) => (mission.missionId === payload ? {
+        ...mission, reserved: false,
+      } : mission));
+      return { ...state, missions: updatedMissions };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, action) => {
@@ -51,14 +42,10 @@ export const missionsSlice = createSlice({
           })
         ));
         return { ...state, missions: newMissions };
-      })
-      .addCase(joinMission.fulfilled, (state, action) => (
-        { ...state, missions: action.payload }
-      ))
-      .addCase(cancelMission.fulfilled, (state, action) => (
-        { ...state, missions: action.payload }
-      ));
+      });
   },
 });
+
+export const { joinMission, cancelMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
